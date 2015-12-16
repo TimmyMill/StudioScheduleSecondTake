@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  * Created by Mike on 12/12/2015.
  * Program assistance from Timmothy Milligan with LogIn.java file.
  */
-public class LogIn extends JDialog{
+class LogIn extends JDialog{
     private JPanel logInPanel;
     private JTextField nameTextField;
     private JPasswordField passwordField;
