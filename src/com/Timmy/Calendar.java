@@ -1,4 +1,4 @@
-package com.Mike;
+package com.Timmy;
 
 import javax.swing.*;
 import javax.swing.table.*;
@@ -7,37 +7,28 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.GregorianCalendar;
 
-public class Calender extends StudioMainMenu{
+public class Calendar extends JPanel {
     static JLabel lblMonth, lblYear;
     static JButton btnPrev, btnNext;
     static JTable tblCalendar;
-    static JComboBox cmbYear;
-    static JFrame calenderPanel;
+    static JComboBox<String> cmbYear;
     static Container pane;
     static DefaultTableModel mtblCalendar; //Table model
     static JScrollPane stblCalendar; //The scrollpane
     static int realDay, realMonth, realYear, currentMonth, currentYear;
 
 
-    public Calender() {
-//        Prepare frame
-        CardLayout c1 = (CardLayout)rootPanel.getLayout();
-        c1.show(rootPanel,getCALENDER());
-
+    public Calendar() {
 
         //Create controls
         lblMonth = new JLabel ("January");
         lblYear = new JLabel ("Change year:");
-        cmbYear = new JComboBox();
+        cmbYear = new JComboBox<String>();
         btnPrev = new JButton ("<<");
         btnNext = new JButton (">>");
         mtblCalendar = new DefaultTableModel(){public boolean isCellEditable(int rowIndex, int mColIndex){return false;}};
         tblCalendar = new JTable(mtblCalendar);
         stblCalendar = new JScrollPane(tblCalendar);
-//        pnlCalendar = new JPanel(null);
-
-        //Set border
-      //  setBorder(BorderFactory.createTitledBorder("Calender"));
 
         //Register action listeners
         btnPrev.addActionListener(new btnPrev_Action());
@@ -45,7 +36,6 @@ public class Calender extends StudioMainMenu{
         cmbYear.addActionListener(new cmbYear_Action());
 
         //Add controls to pane
-//        pane.add(pnlCalendar);
         add(lblMonth);
         add(lblYear);
         add(cmbYear);
@@ -61,10 +51,6 @@ public class Calender extends StudioMainMenu{
         btnPrev.setBounds(10, 25, 50, 25);
         btnNext.setBounds(260, 25, 50, 25);
         stblCalendar.setBounds(10, 50, 300, 250);
-
-        //Make frame visible
-        calenderPanel.setResizable(false);
-        calenderPanel.setVisible(true);
 
         //Get real month/year
         GregorianCalendar cal = new GregorianCalendar(); //Create calendar
@@ -116,7 +102,9 @@ public class Calender extends StudioMainMenu{
         if (month == 0 && year <= realYear-10){btnPrev.setEnabled(false);} //Too early
         if (month == 11 && year >= realYear+100){btnNext.setEnabled(false);} //Too late
         lblMonth.setText(months[month]); //Refresh the month label (at the top)
+        lblMonth.setForeground(Color.LIGHT_GRAY);
         lblMonth.setBounds(160-lblMonth.getPreferredSize().width/2, 25, 180, 25); //Re-align label with calendar
+        lblYear.setForeground(Color.LIGHT_GRAY);
         cmbYear.setSelectedItem(String.valueOf(year)); //Select the correct year in the combo box
 
         //Clear table
@@ -133,12 +121,12 @@ public class Calender extends StudioMainMenu{
 
         //Draw calendar
         for (int i=1; i<=nod; i++){
-            int row = new Integer((i+som-2)/7);
+            int row = (i + som - 2) / 7;
             int column  =  (i+som-2)%7;
             mtblCalendar.setValueAt(i, row, column);
         }
 
-        //Apply renderers
+        //Apply renderer
         tblCalendar.setDefaultRenderer(tblCalendar.getColumnClass(0), new tblCalendarRenderer());
     }
 

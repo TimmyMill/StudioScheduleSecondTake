@@ -1,8 +1,8 @@
-package com.Mike;
+package com.Timmy;
 
 /**
  * client object for sql statements
- * Created by Mike on 12/8/2015.
+ * Created by Timmy on 12/8/2015.
  */
 public class Client {
     private String id;

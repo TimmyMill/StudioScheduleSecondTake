@@ -1,19 +1,18 @@
-package com.Mike;
+package com.Timmy;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 
 /**
- * Created by Mike on 12/7/2015.
+ * Created by Timmy on 12/7/2015.
  */
 public class StudioMainMenu extends JFrame {
     /** top-level panels   */
     public JPanel rootPanel;
     private JPanel clientPanel;
-    public JPanel calenderPanel;
+    public JPanel calendarPanel;
     private JPanel studioPanel;
     private JPanel mainMenuPanel;
 
@@ -61,7 +60,7 @@ public class StudioMainMenu extends JFrame {
     // Main menu card names
     private static String MAIN_MENU = "Main menu panel";
     private static String CLIENTS = "Client interaction panel";
-    private static String CALENDER = "Calender panel";
+    private static String CALENDAR = "Calendar panel";
     private static String STUDIO_DESC = "Studio information";
     // Client panel - Client viewer card names
     private static String VIEW_CLIENTS = "Client list";
@@ -72,7 +71,7 @@ public class StudioMainMenu extends JFrame {
     private static String STUDIO_TWO = "Studio two description";
     private static String STUDIO_THREE = "Studio three description";
 
-//    private static String CALENDEROBJECT = "Calender";
+//    private static String CALENDEROBJECT = "Calendar";
     //private static String ADD_FIELDS = "add client text inputs";
 
 
@@ -97,7 +96,7 @@ public class StudioMainMenu extends JFrame {
         /** Add cards to the root Jpanel. Each  card needs a string to identify it, use constants.*/
         rootPanel.add(mainMenuPanel, MAIN_MENU);
         rootPanel.add(clientPanel, CLIENTS);
-        rootPanel.add(calenderPanel, CALENDER);
+        rootPanel.add(calendarPanel, CALENDAR);
 //        rootPanel.add(calender);
         //TODO Why can't I instiante the calender
         rootPanel.add(studioPanel,STUDIO_DESC);
@@ -135,7 +134,7 @@ public class StudioMainMenu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CardLayout c1 = (CardLayout) rootPanel.getLayout();
-                c1.show(rootPanel,CALENDER);
+                c1.show(rootPanel, CALENDAR);
 
             }
         });
@@ -147,11 +146,11 @@ public class StudioMainMenu extends JFrame {
 
             }
         });
-        /** BUTTON FUNCTION FROM CALENDER*/
+        /** BUTTON FUNCTION FROM CALENDAR*/
         backToMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              //  Calender calender = new Calender();
+              //  Calendar calender = new Calendar();
                 CardLayout c3 = (CardLayout)rootPanel.getLayout();
                 c3.show(rootPanel,MAIN_MENU);
 
@@ -202,7 +201,7 @@ public class StudioMainMenu extends JFrame {
                 System.out.println(addressOfClient);
                 System.out.println(emailOfClient);
                 while (emailOfClient != null && numberOfClient != null) {
-                    com.Mike.Main.createUser(fNameOfClient, lNameOfClient, numberOfClient, addressOfClient, emailOfClient);
+                    com.Timmy.Main.createUser(fNameOfClient, lNameOfClient, numberOfClient, addressOfClient, emailOfClient);
                     break;
                 }
                 clientFName.setText("");
@@ -220,13 +219,13 @@ public class StudioMainMenu extends JFrame {
                 CardLayout c3 = (CardLayout)clientViewer.getLayout();
                 c3.show(clientViewer,VIEW_CLIENTS);
 
-                com.Mike.Main.showUser(clientList);
+                com.Timmy.Main.showUser(clientList);
             }
         });
         deleteClientButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                com.Mike.Main.deleteUser(clientList);
+                com.Timmy.Main.deleteUser(clientList);
 
             }
         });
@@ -278,8 +277,8 @@ public class StudioMainMenu extends JFrame {
     }
 
 
-    public static String getCALENDER() {
-        return CALENDER;
+    public static String getCALENDAR() {
+        return CALENDAR;
     }
 
     /** CREATE CALANDER  */

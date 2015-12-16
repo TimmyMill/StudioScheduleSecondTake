@@ -1,6 +1,4 @@
-package com.Mike;
-
-import com.sun.org.apache.xpath.internal.SourceTree;
+package com.Timmy;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Mike on 12/12/2015.
+ * Created by Timmy on 12/12/2015.
  * Program assistance from Timmothy Milligan with LogIn.java file.
  */
 class LogIn extends JDialog{
