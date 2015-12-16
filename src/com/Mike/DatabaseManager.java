@@ -1,9 +1,9 @@
-package com.Timmy;
+package com.Mike;
 
 import java.sql.*;
 
 /**
- * Created by Timmy on 12/12/2015.
+ * Created by Mike on 12/12/2015.
  * I borrowed this connection class from our lab example,    , written by Clara James
  */
 public class DatabaseManager {

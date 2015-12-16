@@ -4,7 +4,7 @@
 //import java.awt.*;
 //
 ///**
-// * Created by Timmy on 12/11/2015.
+// * Created by Mike on 12/11/2015.
 // */
 //public class StudioInfo extends StudioMainMenu{
 //    private JPanel rootPanel;

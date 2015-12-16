@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.Timmy.StudioMainMenu">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.Mike.StudioMainMenu">
   <grid id="27dc6" binding="rootPanel" layout-manager="CardLayout" hgap="0" vgap="0">
     <constraints>
       <xy x="20" y="20" width="500" height="430"/>
@@ -259,7 +259,7 @@
               <verticalAlignment value="0"/>
             </properties>
           </component>
-          <component id="8682a" class="com.Timmy.Calendar">
+          <component id="8682a" class="com.Mike.Calendar">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>

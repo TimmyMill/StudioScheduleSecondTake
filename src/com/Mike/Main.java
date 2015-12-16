@@ -1,9 +1,9 @@
-/** Programmed by Timmy Knutson
+/** Programmed by Mike Knutson
  *  studioSchedule , Final project , 12.14.2015
  *  Main method, database connection method call
  */
 
-package com.Timmy;
+package com.Mike;
 import javax.swing.*;
 import java.sql.*;
 

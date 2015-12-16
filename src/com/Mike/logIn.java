@@ -1,4 +1,4 @@
-package com.Timmy;
+package com.Mike;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Timmy on 12/12/2015.
+ * Created by Mike on 12/12/2015.
  * Program assistance from Timmothy Milligan with LogIn.java file.
  */
 class LogIn extends JDialog{
@@ -34,7 +34,7 @@ class LogIn extends JDialog{
             }
         });
     }
-    /** Timmy helped me figure out how to allow use of user inputted variables for USER and PW instead of using hard coded values from MAIN */
+    /** Mike helped me figure out how to allow use of user inputted variables for USER and PW instead of using hard coded values from MAIN */
     private void grantAccess(){
         user = nameTextField.getText();
         for (char x : passwordField.getPassword()){

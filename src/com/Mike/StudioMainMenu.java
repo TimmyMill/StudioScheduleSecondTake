@@ -1,4 +1,4 @@
-package com.Timmy;
+package com.Mike;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Timmy on 12/7/2015.
+ * Created by Mike on 12/7/2015.
  */
 public class StudioMainMenu extends JFrame {
     /** top-level panels   */
@@ -201,7 +201,7 @@ public class StudioMainMenu extends JFrame {
                 System.out.println(addressOfClient);
                 System.out.println(emailOfClient);
                 while (emailOfClient != null && numberOfClient != null) {
-                    com.Timmy.Main.createUser(fNameOfClient, lNameOfClient, numberOfClient, addressOfClient, emailOfClient);
+                    com.Mike.Main.createUser(fNameOfClient, lNameOfClient, numberOfClient, addressOfClient, emailOfClient);
                     break;
                 }
                 clientFName.setText("");
@@ -219,13 +219,13 @@ public class StudioMainMenu extends JFrame {
                 CardLayout c3 = (CardLayout)clientViewer.getLayout();
                 c3.show(clientViewer,VIEW_CLIENTS);
 
-                com.Timmy.Main.showUser(clientList);
+                com.Mike.Main.showUser(clientList);
             }
         });
         deleteClientButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                com.Timmy.Main.deleteUser(clientList);
+                com.Mike.Main.deleteUser(clientList);
 
             }
         });
